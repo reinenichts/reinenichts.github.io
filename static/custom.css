@@ -1,0 +1,12 @@
+@font-face {
+  font-family: Vazir;
+  src: url(Vazir.ttf);
+}
+
+* {
+  font-family: Vazir;
+}
+
+pre {
+    direction: ltr;
+}
