@@ -45,3 +45,34 @@ blockquote {
      background-repeat: no-repeat;
      background-position: bottom right;
    }
+
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #ffffff;
+}
+
+#menu li {
+  float: right;
+}
+
+#menu li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #666;
+}
+
+#menu li a:hover {
+  background-color: #fafafa;
+}
