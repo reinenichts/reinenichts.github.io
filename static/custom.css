@@ -14,7 +14,7 @@ pre {
     direction: ltr;
 }
 
-.body .entry-content {
+body .article-content {
     padding-right: 5%;
     padding-left: 5%;
     margin-left: auto;
@@ -30,9 +30,6 @@ img {
     max-width: 100%;
 }
 
-#about {
-    direction: ltr;
-}
 blockquote {
   font: 14px/20px italic Times, serif;
   padding: 8px;
@@ -51,6 +48,15 @@ blockquote {
      background-repeat: no-repeat;
      background-position: bottom right;
    }
+
+#about {
+    direction: ltr;
+    font-size: medium;
+}
+
+#about * {
+    font-size: medium;
+}
 
 #banner {
     display: flex;
