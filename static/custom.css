@@ -50,12 +50,11 @@ blockquote {
    }
 
 #about {
-    direction: ltr;
-    font-size: medium;
+    font-size: small;
 }
 
 #about * {
-    font-size: medium;
+    font-size: small;
 }
 
 #banner {
@@ -96,4 +95,8 @@ blockquote {
 
 #article-details * {
     font-size: medium;
+}
+
+.date {
+    font-size: small;
 }

@@ -1,8 +1,12 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
         <title>dmenu: یک منوی کوچکِ پویا و فراتر از آن — سحرارآمیز</title>
-        <meta charset="utf-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="محسن برزگر">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/theme/css/rdark.css" />
@@ -12,25 +16,54 @@
         <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
         <link href="/" type="application/atom+xml" rel="alternate" title="سحرارآمیز ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-</head>
-</head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">سحرارآمیز <strong></strong></a></h1>
-        </header><!-- /#banner -->
-        <nav id="menu"><ul>
-            <li><a href="/pages/drbrh.html">درباره</a></li>
-            <li><a href="/pages/tms-b-mn.html">تماس با من</a></li>
-            <li><a href="/category/bdwn-mwdw.html">بدون موضوع</a></li>
-            <li class="active"><a href="/category/chr-lynwkhs.html">چرا لینوکس؟</a></li>
-        </ul></nav><!-- /#menu -->
+    </head>
+    <body>
+        <h1 style="text-align:center"><a href="/">سحرارآمیز</a></h1>
+        <hr>
+        <nav>
+                <a href="/pages/drbrh.html" >درباره</a>
+                |
+                <a href="/pages/tms-b-mn.html" >تماس با من</a>
+                |
+        </nav>
     <h1 class="article-title">dmenu: یک منوی کوچکِ پویا و فراتر از آن</h1>
 	<div class="article-content"><p>dmenu یکی از ابزارهای پروژه‌ی <sup><a href="#footnote1">1</a></sup> Suckless هست که در نگاه عمومی ازش به عنوان یک منوی اجرا کننده‌ی برنامه‌ها در لینوکس یاد میشه. dmenu مثل بقیه‌ی نرم‌افزهایی که توسط suckless تولید شده سرعت بالایی داره و مهمتر اینکه کار ساده‌ای که برای انجامش ساخته شده رو به بهترین نحو انجام میده.</p>
 <p>طبق تعریف suckless، کار این برنامه ساخت واستفاده‌ی بهینه از منوهای تعریف شده توسط کاربر هست.  به این صورت که کاربر میتونه آیتم‌هایی رو در قالب یک لیست بهش بده و dmenu اون لیست رو نمایش میده و بر اساس آیتمی که توسط کاربر از لیست انتخاب میشه، واکنش نشون میده.</p>
 <p>کل ایده‌ی dmenu توی همین یک کارِ ساده خلاصه میشه. با همین روش یه لیست از کل برنامه‌های نصب شده روی سیستم میگیره و لیست رو روی صفحه به کاربر نشون می‌ده و برنامه‌ای که کاربر از لیست انتخاب میکنه رو اجرا میکنه. با بهترین و سریعترین و کم‌هزینه‌ترین کدی که تیم سازندش میتونسته تولید کنه.</p>
 <p><img alt="dmenu1" src="../images/dmenu1.gif"></p>
 <p>پس بر خلاف نگاه عمومی، توانایی این برنامه خیلی فراتر از یک "اجراکننده‌ی برنامه"ی ساده هست.</p>
+<hr>
+<h2>روش نصب</h2>
+<ul>
+<li>نصب در آرچ:</li>
+</ul>
+<p>طبق <a href="https://wiki.archlinux.org/index.php/Dmenu#Installation">توضیحات ویکی آرچ</a> میتونید dmenu رو از مخازن اصلی آرچ در <a href="https://www.archlinux.org/packages/?name=dmenu">dmenu</a> یا از مخازن کاربران آرچ (aur) در <a href="https://aur.archlinux.org/packages/dmenu-git/">dmenu-git</a> با دستورهای زیر نصب کنید:</p>
+<div class="highlight"><pre><span></span><code>  sudo pacman -S dmenu
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code>yay -Syy dmenu-git
+</code></pre></div>
+
+
+<ul>
+<li>نصب در اوبونتو:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo apt install dmenu
+</code></pre></div>
+
+
+<ul>
+<li>نصب از سورس کد:</li>
+</ul>
+<p><a href="https://tools.suckless.org/dmenu/">سورس</a> رو دانلود و از حالت فشرده خارج کنید.</p>
+<p>از طریق خط فرمان به دایرکتوری سورس کد cd و دستور زیر رو اجرا کنید:</p>
+<div class="highlight"><pre><span></span><code>sudo make install
+</code></pre></div>
+
+
+<p>و نصب انجام شده میتونیم با اجرای دستور dmenu_run برنامه رو اجرا کنیم.</p>
 <hr>
 <p><a name="footnote1">1</a> : هدف پروژه‌ی <a href="https://suckless.org">Suckless</a> همونجوری که در شعار صفحه‌ی اول وبسایتشون نوشته شده، تولید نرم‌افزارهایی هست که کمتر بد باشن (software that sucks less). تمرکزشون رو روی سادگی و بهینگی کدهاشون گذاشتن و شدیدا در این مورد سختگیرن.</p></div>
     <div id="article-details">
@@ -66,12 +99,14 @@
             </span>
         </div>
     </div>
-	<hr>
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-        </footer><!-- /#contentinfo -->
-</body>
+
+        <hr>
+
+        <footer>
+            <address id="about">
+                    با افتخار نیرو گرفته از <a href="http://pelican.notmyidea.org/">Pelican</a>
+            </address><!-- /#about -->
+
+          </footer>
+    </body>
 </html>
