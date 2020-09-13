@@ -14,7 +14,7 @@ pre {
     direction: ltr;
 }
 
-body .article-content {
+#article {
     padding-right: 5%;
     padding-left: 5%;
     margin-left: auto;
@@ -99,4 +99,8 @@ blockquote {
 
 .date {
     font-size: small;
+}
+
+.extra-nav * {
+    font-size: medium;
 }
