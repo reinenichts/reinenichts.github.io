@@ -101,6 +101,10 @@ blockquote {
     font-size: small;
 }
 
-.extra-nav * {
+footer.links * {
     font-size: medium;
+}
+
+hr {
+    border: 1px dashed  gray;
 }
