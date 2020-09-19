@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>سحرارآمیز</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-08-27T22:50:00+04:30</updated><entry><title>dmenu: یک منوی کوچکِ پویا و فراتر از آن</title><link href="/dmenu-intro.html" rel="alternate"></link><published>2020-08-27T22:50:00+04:30</published><updated>2020-08-27T22:50:00+04:30</updated><author><name>محسن برزگر</name></author><id>tag:None,2020-08-27:/dmenu-intro.html</id><summary type="html">&lt;p&gt;dmenu&lt;/p&gt;</summary><content type="html">&lt;p&gt;dmenu یکی از ابزارهای پروژه‌ی &lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt; Suckless هست که در نگاه عمومی ازش به عنوان یک منوی اجرا کننده‌ی برنامه‌ها در لینوکس یاد میشه. dmenu مثل بقیه‌ی نرم‌افزهایی که توسط suckless تولید شده سرعت بالایی داره و مهمتر اینکه کار ساده‌ای که برای انجامش ساخته شده رو به بهترین نحو انجام میده.&lt;/p&gt;
+&lt;p&gt;طبق تعریف suckless، کار این برنامه ساخت واستفاده‌ی بهینه از منوهای تعریف شده توسط کاربر هست.  به این صورت که کاربر میتونه آیتم‌هایی رو در قالب یک لیست بهش بده و dmenu اون لیست رو نمایش میده و بر اساس آیتمی که توسط کاربر از لیست انتخاب میشه، واکنش نشون میده.&lt;/p&gt;
+&lt;p&gt;کل ایده‌ی dmenu توی همین یک کارِ ساده خلاصه میشه. با همین روش یه لیست از کل برنامه‌های نصب شده روی سیستم میگیره و لیست رو روی صفحه به کاربر نشون می‌ده و برنامه‌ای که کاربر از لیست انتخاب میکنه رو اجرا میکنه. با بهترین و سریعترین و کم‌هزینه‌ترین کدی که تیم سازندش میتونسته تولید کنه.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="dmenu1" src="../images/dmenu1.gif"&gt;&lt;/p&gt;
+&lt;p&gt;پس بر خلاف نگاه عمومی، توانایی این برنامه خیلی فراتر از یک "اجراکننده‌ی برنامه"ی ساده هست.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;روش نصب&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;نصب در آرچ:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;طبق &lt;a href="https://wiki.archlinux.org/index.php/Dmenu#Installation"&gt;توضیحات ویکی آرچ&lt;/a&gt; میتونید dmenu رو از مخازن اصلی آرچ در &lt;a href="https://www.archlinux.org/packages/?name=dmenu"&gt;dmenu&lt;/a&gt; یا از مخازن کاربران آرچ (aur) در &lt;a href="https://aur.archlinux.org/packages/dmenu-git/"&gt;dmenu-git&lt;/a&gt; با دستورهای زیر نصب کنید:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  sudo pacman -S dmenu
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;yay -Syy dmenu-git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;نصب در اوبونتو:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install dmenu
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;نصب از سورس کد:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://tools.suckless.org/dmenu/"&gt;سورس&lt;/a&gt; رو دانلود و از حالت فشرده خارج کنید.&lt;/p&gt;
+&lt;p&gt;از طریق خط فرمان به دایرکتوری سورس کد cd و دستور زیر رو اجرا کنید:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;و نصب انجام شده میتونیم با اجرای دستور dmenu_run برنامه رو اجرا کنیم.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a name="footnote1"&gt;1&lt;/a&gt; : هدف پروژه‌ی &lt;a href="https://suckless.org"&gt;Suckless&lt;/a&gt; همونجوری که در شعار صفحه‌ی اول وبسایتشون نوشته شده، تولید نرم‌افزارهایی هست که کمتر بد باشن (software that sucks less). تمرکزشون رو روی سادگی و بهینگی کدهاشون گذاشتن و شدیدا در این مورد سختگیرن.&lt;/p&gt;</content><category term="چرا لینوکس؟"></category><category term="tools"></category><category term="ابزار"></category><category term="dmenu"></category><category term="suckless"></category></entry><entry><title>بهبود کیفیت زندگی از حیث ابزراآلات مورد استفاده</title><link href="/qip.html" rel="alternate"></link><published>2020-08-25T16:20:00+04:30</published><updated>2020-08-25T16:20:00+04:30</updated><author><name>محسن برزگر</name></author><id>tag:None,2020-08-25:/qip.html</id><summary type="html">&lt;p&gt;ابزارها و تکنولوژی هایی که دوستشون دارم و هر روز ازشون استفاده می‌کنم و سعی می‌کنم اینجا معرفیشون کنم&lt;/p&gt;</summary><content type="html">&lt;p&gt;ابزارها و تکنولوژی هایی که دوستشون دارم و هر روز ازشون استفاده می‌کنم و سعی می‌کنم اینجا معرفیشون کنم:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Tiling_window_manager"&gt; مدیر پنجره‌ی کاشی‌گرا&lt;/a&gt;  به جای &lt;a href="https://fa.wikipedia.org/wiki/%D9%85%D8%AD%DB%8C%D8%B7_%D8%B1%D9%88%D9%85%DB%8C%D8%B2%DB%8C"&gt;محیط دسکتاپ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://i3wm.org/"&gt;i3wm&lt;/a&gt; : مدیر پنجره‌ی کاشی‌گرا &lt;sup&gt;&lt;a href="#myfootnote1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tmux/tmux/wiki"&gt;Tmux&lt;/a&gt; : نرم‌افزار تقسیم بندی ترمینال&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://tools.suckless.org/dmenu/"&gt;dmenu&lt;/a&gt; : منوی پویا&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://krosbits.in/musicolet/"&gt;Musicolet&lt;/a&gt; : پخش موسیقی در اندروید&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a name="myfootnote1"&gt;1&lt;/a&gt; : کاشی‌گونه، کاشی‌صفت، کاشیانه&lt;/p&gt;</content><category term="چرا لینوکس؟"></category><category term="tools"></category><category term="ابزار"></category></entry><entry><title>دستورالعمل تهیه‌ی کتابچه‌های آ۶ خانگی</title><link href="/bookleter.html" rel="alternate"></link><published>2020-07-16T15:37:00+04:30</published><updated>2020-07-16T15:37:00+04:30</updated><author><name>محسن برزگر</name></author><id>tag:None,2020-07-16:/bookleter.html</id><summary type="html">&lt;p&gt;دستورالعمل تهیه‌ی کتابچه‌های آ۶ خانگی&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="../images/bookleter/header.jpeg"/&gt;&lt;/p&gt;
+&lt;h3&gt;داستان کتابچه‌ها&lt;/h3&gt;
+&lt;p&gt;یه کامپیوتری (برنامه نویس) که بیشتر کتابایی که لازم داره ترجمه نشده و &lt;strong&gt;برای خرید در دسترس نیست&lt;/strong&gt; و با فرمت &lt;strong&gt;پی‌دی‌اِف‌&lt;/strong&gt; زیاد سر و کار داره.&lt;/p&gt;
+&lt;p&gt;یه &lt;strong&gt;سرباز&lt;/strong&gt; که میخواد وقت خالیش توی پادگان کمتر به بطالت بگذره رو میاره به کتاب خوندن.&lt;/p&gt;
+&lt;p&gt;یه کتاب که از یه دوست قرض گرفته شده و میاد توی پادگان ظرف مدت یک هفته اگه گم نشه قطعاً پاره میشه.&lt;/p&gt;
+&lt;p&gt;پس یه سرباز کامپیوتری که میخواد اوقات بیکاریش توی پادگان کمتر به بطالت بگذره باید یه کاری کنه که پی‌دی‌اِف‌ هاش رو بتونه ببره توی پادگان بخونه، پی‌دی‌اِف‌ هاش دیده و قرض گرفته نشن و اگه هم داغون و پاره شدن خیلی حیف نباشه.&lt;/p&gt;
+&lt;p&gt;پس ارزش داره که وقت بذاره و راهی پیدا کنه که پی‌دی‌اِف‌ هاش رو بتونه کوچیک و جیبی چاپ کنه.&lt;/p&gt;
+&lt;h3&gt;در پایان چی گیرش میاد؟&lt;/h3&gt;
+&lt;p&gt;چرا باید زحمت کشید برای همچین چیزی؟ چه دلیلی برای انجام همچین کاری هست؟ چرا به جای زحمت کشیدن برای کوچیک کردن کتابام جیبامو بزرگتر نکنم؟&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;این کتابچه میتونه مجموعه‌ی&lt;/em&gt; &lt;strong&gt;شعر&lt;/strong&gt;&lt;em&gt;ای مورد علاقتون باشه یا گلچین چنتا&lt;/em&gt; &lt;strong&gt;داستان کوتاه&lt;/strong&gt;&lt;em&gt;،&lt;/em&gt; &lt;strong&gt;مقاله&lt;/strong&gt;&lt;em&gt;،&lt;/em&gt; &lt;strong&gt;نوت موسیقی&lt;/strong&gt; &lt;em&gt;و یا همه‌ی اینا با هم توی یه کتاب__.&lt;/em&gt; پس میتونیم یه کتاب درست کنیم که نمونش توی هیچ کتابخونه‌ای پیدا نمیشه و فقط یه دونه ازش تو دنیا وجود داره که طبیعتا میتونه &lt;strong&gt;هدیه‌&lt;/strong&gt;&lt;em&gt;ی خوبی باشه__.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;در ضمن، &lt;strong&gt;هزینه‌&lt;/strong&gt;ی چاپش هم از سایزهای بزرگتر کم‌تر هست.&lt;/p&gt;
+&lt;p&gt;و خیلی &lt;strong&gt;زیباست&lt;/strong&gt; ... چه &lt;strong&gt;رنگی&lt;/strong&gt; ... چه &lt;strong&gt;سیاه و سفید&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/booklets1.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;با &lt;strong&gt;جلد&lt;/strong&gt;های اختصاصی‌ و مسخره‌اي که خودمون میتونیم درستشون کنیم و انتشاراتی‌ها اجازه چاپش رو ندارن.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/tdd-bookcover.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/aot.jpeg"/&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;کتاب یا دفترچه؟&lt;/h3&gt;
+&lt;p&gt;چاپ پی‌دی‌اِف‌ هامون به شکل کتاب معمولی چنتا مشکل داره،&lt;/p&gt;
+&lt;p&gt;یکیش اینه که خب برای چسبوندن صفحات به هم چیکار میشه کرد؟ شیرازه؟ فنر؟ چسب؟ البته که نـــــــــــــــــــــــه&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/hellno.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;پس اگه بتونیم کتاب رو به فرمت دفتر مانند(مثل دفتر ۱۰۰ برگایی که از وسطشون برگ میکندیم) چاپ کنیم مشکلمون حل میشه.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/daftar.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;مورد دوم سایز کتاب هست. سایز آ۴ برای این کار مناسب نیست چون خیلی بزرگه.&lt;/p&gt;
+&lt;p&gt;سایز آ۵ بهتره ولی بازم بزرگه (میخوایم کتابمون با نمک‌تر باشه و تو جیب جا شه).&lt;/p&gt;
+&lt;p&gt;سایز آ۶ عالیه ولی یه سری پیچیدگی‌ها داره.&lt;/p&gt;
+&lt;p&gt;در چاپ سایز آ۵ باید توی هر صفحه‌ی آ۴ دوتا از صفحات کتابمون چاپ شن. که خب برای این کار توی بخش پرینت آدوبی ریدر چاپ به صورت booklet رو داریم که دقیقاً همین کار رو برای سایز آ۵ انجام میده. از &lt;a href="https://helpx.adobe.com/acrobat/kb/print-booklets-acrobat-reader.html"&gt;اینجا&lt;/a&gt; میتونید این روش رو ببینید.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/a5-booklet.png"/&gt;&lt;/p&gt;
+&lt;p&gt;ولی برای سایز آ۶ چون باید توی هر صفحه، ۴ صفحه چاپ شه و بعد صفحات از وسط بُرِش بخورن و روی هم قرار بگیرن و باز هم ترتیب حفظ شه، طبیعتاً پیچیدگی کار خیلی بیشتر میشه و هیچ نرم‌افزاری (تا اونجایی که من دیدم) این کار رو انجام نمیده.
+توی وب گردیم به یه &lt;a href="https://github.com/ERnsTL/a6-booklet-on-a4"&gt;برنامه‌‌ با زبان گو&lt;/a&gt; برخوردم که دقیقاً همین کاری که میخوایم رو انجام میده. ترتیب صفحات رو طوری به هم میریزه که بعد از چاپ ۴ صفحه روی یک طرف برگه‌ی آ۴ و ۴ صفحه‌ی بعد پشت همون برگه و بُرِش از وسط، ترتیب حفظ میشه.&lt;/p&gt;
+&lt;p&gt;اما برای رسیدن به نتیجه‌ی مطلوب صرفاً استفاده از این برنامه کافی نیست. چنتا نکته هست که باید قبل از چاپ بهش توجه کرد.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;مارجین ( حاشیه صفحه )&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;معمولاً &lt;strong&gt;حاشیه&lt;/strong&gt; صفحات توی سایز آ۴ زیادتر از حد نیاز ما هست که توی سایز آ۶ باعث میشه بیشتر صفحه رو فضای سفید پر کنه. پس تا جایی که امکانش هست سعی میکنیم &lt;strong&gt;حاشیه&lt;/strong&gt; رو کم کنیم که از فضای کمی که در اختیارمون هست استفاده‌ی بهینه کرده باشیم.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/margin.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;همچنین بعضی از کتاب‌ها فضای زیادی رو صرف پاورقی و سرصفحه کردن که در بیشتر مواقع بهش نیازی نیست پس بعضی وقتا لازم هست که حاشیه‌های کتابمون رو قبل از چاپ &lt;strong&gt;برش&lt;/strong&gt; بدیم.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;حاشیه‌ی چاپ&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;خود دستگاه‌های چاپ یه &lt;strong&gt;حاشیه&lt;/strong&gt; پیش‌فرض رو در چاپ اعمال میکنن. پس این رو هم برای بهینه کردن فضای خالیمون باید در نظر بگیریم.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;فارسی یا انگلیسی&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;هر کتابی رو که با این برنامه ویرایش و چاپ کنید صفحاتش به طور پیش‌فرض &lt;strong&gt;چپ به راست&lt;/strong&gt; چینش میشن. پس برای کتاب‌های زبان‌های &lt;strong&gt;راست به چپ&lt;/strong&gt; مثل فارسی، باید قبل از ویرایش و چاپ ترتیب صفحات رو در صورت نیاز بر عکس کنیم.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;راه‌کار من&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;بنابراین برای رسیدن به یه نتیجه‌ی مطلوب باید یه سری کارها رو از قبل روی پی‌دی‌اِف‌ انجام بدیم.&lt;/p&gt;
+&lt;p&gt;از اونجایی که انجام همه‌ی این مراحل برای تولید هر کتاب وقت گیر هست من یه &lt;a href="https://github.com/reinenichts/bookleter"&gt;برنامه‌ی کمکی&lt;/a&gt; برای خودکار کردن این فرایند درست کردم.&lt;a href="https://github.com/reinenichts/bookleter"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;این برنامه صفحات دلخواه رو جدا می‌کنه و چینش کتاب رو بر اساس زبان تغییر میده و حاشیه‌ها رو به میزان دلخواه برش میزنه و در آخر ترتیب صفحات رو طوری به هم میریزه که برای چاپ در سایز آ۶ آماده شه.&lt;/p&gt;
+&lt;h3&gt;استفاده از برنامه&lt;/h3&gt;
+&lt;p&gt;برای استفاده از این برنامه سه راه داریم:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;روش اول&lt;/strong&gt;: استفاده از فایل اجرایی ویندوز&lt;/p&gt;
+&lt;p&gt;فایل اجرایی ویندوز رو میتونید از &lt;a href="https://github.com/reinenichts/bookleter/releases"&gt;اینجا&lt;/a&gt; دانلود و اجرا کنید.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/github-release.png" width="200"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/bookleter.exe.png" width="200"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/bookleter-window.png" width="200"/&gt;&lt;/p&gt;
+&lt;p&gt;Book Direction: جهت چینش بر اساس زبان کتاب، راست به چپ یا چپ به راست&lt;/p&gt;
+&lt;p&gt;Start Page: از صفحه‌ی End Page: تا صفحه‌ی&lt;/p&gt;
+&lt;p&gt;crop: میزان برش حاشیه‌ها بر حسب پیکسل.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;روش دوم&lt;/strong&gt;: از طریق خط فرمان&lt;/p&gt;
+&lt;p&gt;روش نصب با &lt;a href="https://pythonmarket.ir/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B5%D8%A8-pip/"&gt;پیپ&lt;/a&gt; (&lt;a href="https://pythonmarket.ir/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B5%D8%A8-pip/"&gt;pip&lt;/a&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$&lt;/span&gt; pip install bookleter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$&lt;/span&gt; bookleter  &lt;span class="o"&gt;[&lt;/span&gt; pdfname &lt;span class="o"&gt;]&lt;/span&gt;  &lt;span class="o"&gt;[&lt;/span&gt; startPage-endPage &lt;span class="o"&gt;]&lt;/span&gt;  &lt;span class="o"&gt;[&lt;/span&gt; direction: rtl, ltr &lt;span class="o"&gt;]&lt;/span&gt;  &lt;span class="o"&gt;[&lt;/span&gt; page crop in pixels: &lt;span class="s1"&gt;&amp;#39;left top right bottom&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;example command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$&lt;/span&gt; bookleter   my_book.pdf  &lt;span class="m"&gt;1&lt;/span&gt;-80  rtl  &lt;span class="s1"&gt;&amp;#39;5 20 10 40&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;اسم فایل (pdfname)&lt;/p&gt;
+&lt;p&gt;از صفحه‌ی فلان (startPage) تا صفحه‌ی فلان (endPage)&lt;/p&gt;
+&lt;p&gt;جهت چینش بر اساس زبان کتاب، راست به چپ یا چپ به راست (direction)&lt;/p&gt;
+&lt;p&gt;rtl (Right To Left) یا ltr(Left To Right)&lt;/p&gt;
+&lt;p&gt;میزان برش (crop): میزان برش حاشیه‌ها بر حسب پیکسل.&lt;/p&gt;
+&lt;p&gt;'۴۰ ۱۰ ۲۰ ۵'&lt;/p&gt;
+&lt;p&gt;'پایین : ۴۰ راست : ۱۰ بالا : ۲۰ چپ : ۵'&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;روش سوم&lt;/strong&gt; : از طریق محیط گرافیکی&lt;/p&gt;
+&lt;p&gt;با اجرای دستور bookleter بدون ورودی محیط گرافیکی براتون باز میشه&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;$&lt;/span&gt; bookleter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;در پایان اجرای برنامه دو تا فایل براتون ایجاد میشه با نام های&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;my_pdf_print_this.pdf&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;my_pdf_print_this_for_test.pdf&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;که فایل تست یه فایل ۸ صفحه‌ای هست برای چاپ یه نمونه‌ کتابچه‌ی ۸ صفحه‌ای( یک برگه آ۴ پشت و رو هر طرف ۴ صفحه )، که قبل از چاپ کتابچه‌ی اصلی با چاپ این کتابچه‌ی تست می‌تونیم از درستی کارمون مطمئن شیم.&lt;/p&gt;
+&lt;h3&gt;روش چاپ&lt;/h3&gt;
+&lt;p&gt;حالا با داشتن یه فایل پی‌دی‌اِف‌ به هم ریخته به مرحله چاپ کتابچه میرسیم.
+تنظیمات چاپتون باید به صورت چهار صفحه در یک صفحه باشه.
+به این صورت که چهار صفحه‌ی اول به ترتیب از بالا چپ به طرف پایین راست(به صورت حرف z) و چهار صفحه‌ی دوم به همین ترتیب پشت برگه چاپ میشه.&lt;/p&gt;
+&lt;p&gt;که این کار توی تنظیمات چاپ به دو روش زیر قابل انجام هست.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/print-setting.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/print-setting2.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;بعد از چاپ به همون ترتیبی که صفحات A4 از پرینتر در میان تمام صفحات رو از وسط برش میزنیم.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/cropping.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;نیمه‌ی بالایی صفحات اولیه رو تشکیل میدن. از صفحات نیمه بالایی شروع میکنیم و به ترتیب شماره، صفحات رو روی هم می‌چینیم. بعد از اتمام نیمه‌ی بالایی نیمه‌ی پایینی رو میچینیم.
+و در آخر با اطمینان از درست بودن ترتیب صفحات، کتاب رو مثل یه دفترچه از وسط منگنه میزنیم.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/final-look.jpeg"/&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;این کتابچه میتونه مجموعه‌ی&lt;/em&gt; &lt;strong&gt;شعر&lt;/strong&gt;&lt;em&gt;ای مورد علاقتون باشه یا گلچین چنتا&lt;/em&gt; &lt;strong&gt;داستان کوتاه&lt;/strong&gt;&lt;em&gt;،&lt;/em&gt; &lt;strong&gt;مقاله&lt;/strong&gt;&lt;em&gt;،&lt;/em&gt; &lt;strong&gt;نوت موسیقی&lt;/strong&gt; &lt;em&gt;و یا همه‌ی اینا با هم توی یه کتاب__.&lt;/em&gt; پس میتونیم یه کتاب درست کنیم که نمونش توی هیچ کتابخونه‌ای پیدا نمیشه و فقط یه دونه ازش تو دنیا وجود داره که طبیعتا میتونه &lt;strong&gt;هدیه‌&lt;/strong&gt;&lt;em&gt;ی خوبی باشه__.&lt;/em&gt;
+در ضمن، &lt;strong&gt;هزینه‌&lt;/strong&gt;ی چاپش هم از سایزهای بزرگتر کم‌تر هست.
+و خیلی &lt;strong&gt;زیباست&lt;/strong&gt; ... چه &lt;strong&gt;رنگی&lt;/strong&gt; ... چه &lt;strong&gt;سیاه و سفید&lt;/strong&gt; .&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;اگه حین استفاده از برنامه یا چاپ به مشکلی برخوردید خوشحال میشم کمکتون کنم. اگه روش دیگه‌ای هم برای انجام این کار سراغ دارید مطرح کنید که به آخر متن اضافش کنم.&lt;/p&gt;</content><category term="بدون موضوع"></category></entry><entry><title>این آهنگ و شنیدی؟ قطعا</title><link href="/marule.html" rel="alternate"></link><published>2018-05-03T18:55:00+04:30</published><updated>2018-05-03T18:55:00+04:30</updated><author><name>محسن برزگر</name></author><id>tag:None,2018-05-03:/marule.html</id><summary type="html">&lt;p&gt;اگه یکی ازتون پرسید این آهنگ و شنیدی...&lt;/p&gt;</summary><content type="html">&lt;p&gt;اگه یکی ازتون پرسید:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;این آهنگ و شنیدی؟&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;در صورتی که وقتی سوالشو داره میپرسه آهنگ رو هم براتون پخش کنه، شما قطعا اون آهنگ رو شنیدید.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pelican" src="../images/music.gif"&gt;&lt;/p&gt;</content><category term="بدون موضوع"></category></entry><entry><title>سلام دنیا!</title><link href="/hello.html" rel="alternate"></link><published>2018-05-02T18:55:00+04:30</published><updated>2018-05-02T18:55:00+04:30</updated><author><name>محسن برزگر</name></author><id>tag:None,2018-05-02:/hello.html</id><content type="html">&lt;p&gt;سلام پلیکان!&lt;/p&gt;</content><category term="بدون موضوع"></category></entry></feed>
