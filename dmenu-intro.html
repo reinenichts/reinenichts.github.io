@@ -46,7 +46,7 @@
 <li>نصب در آرچ:</li>
 </ul>
 <p>طبق <a href="https://wiki.archlinux.org/index.php/Dmenu#Installation">توضیحات ویکی آرچ</a> میتونید dmenu رو از مخازن اصلی آرچ در <a href="https://www.archlinux.org/packages/?name=dmenu">dmenu</a> یا از مخازن کاربران آرچ (aur) در <a href="https://aur.archlinux.org/packages/dmenu-git/">dmenu-git</a> با دستورهای زیر نصب کنید:</p>
-<div class="highlight"><pre><span></span><code>  sudo pacman -S dmenu
+<div class="highlight"><pre><span></span><code>sudo pacman -S dmenu
 </code></pre></div>
 
 
@@ -71,6 +71,15 @@
 
 
 <p>و نصب انجام شده میتونیم با اجرای دستور dmenu_run برنامه رو اجرا کنیم.</p>
+<h2>یک مثال ساده</h2>
+<p>گفتیم که آیتم‌هایی رو میتونیم به dmenu پاس بدیم و dmenu اون‌ها رو در قالب یک منو به ما نمایش میده. این آیتم‌ها رو به روش‌های مختلفی میتونیم به خورد dmenu بدیم. dmenu هم مثل خیلی از برنامه‌های یونیکس/گنو/لینوکس از قابلیت <a href="https://fa.wikipedia.org/wiki/%D9%84%D9%88%D9%84%D9%87%E2%80%8C%DA%A9%D8%B4%DB%8C_%28%DB%8C%D9%88%D9%86%DB%8C%DA%A9%D8%B3%29">پایپینگ</a> (لوله‌کشی، piping) بهره میبره. یعنی مثلا میتونیم یک متن شامل سه خط رو به عنوان یک لیست سه آیتمی به شکل زیر بهش بدیم:</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">echo</span> -e <span class="s2">&quot;first\nsecond\nthird&quot;</span> <span class="p">|</span> dmenu
+</code></pre></div>
+
+
+<p>که به صورت زیر نمایش داده میشه و با انتخاب هر کدوم از گزینه‌ها، گزینه‌ی انتخابی رو توی خروجی ترمینال چاپ می‌کنه.</p>
+<p><img alt="dmenu2" src="../images/dmenu-intro/dmenu-example-1.jpg"></p>
+<p>البته احتمالا نوع و سایز فونت برای شما متفاوت باشه که در ادامه نحوه‌ی تغییر دادنش رو خواهم گفت.</p>
 <hr>
 <p><a name="footnote1">1</a> : هدف پروژه‌ی <a href="https://suckless.org">Suckless</a> همونجوری که در شعار صفحه‌ی اول وبسایتشون نوشته شده، تولید نرم‌افزارهایی هست که کمتر بد باشن (software that sucks less). تمرکزشون رو روی سادگی و بهینگی کدهاشون گذاشتن و شدیدا در این مورد سختگیرن.</p></div>
         <div id="article-details">
