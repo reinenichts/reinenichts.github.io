@@ -10,18 +10,18 @@
 &lt;li&gt;نصب در آرچ:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;طبق &lt;a href="https://wiki.archlinux.org/index.php/Dmenu#Installation"&gt;توضیحات ویکی آرچ&lt;/a&gt; میتونید dmenu رو از مخازن اصلی آرچ در &lt;a href="https://www.archlinux.org/packages/?name=dmenu"&gt;dmenu&lt;/a&gt; یا از مخازن کاربران آرچ (aur) در &lt;a href="https://aur.archlinux.org/packages/dmenu-git/"&gt;dmenu-git&lt;/a&gt; با دستورهای زیر نصب کنید:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo pacman -S dmenu
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo pacman -S dmenu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;yay -Syy dmenu-git
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ yay -Syy dmenu-git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
 &lt;li&gt;نصب در اوبونتو:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install dmenu
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo apt install dmenu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
@@ -30,7 +30,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="https://tools.suckless.org/dmenu/"&gt;سورس&lt;/a&gt; رو دانلود و از حالت فشرده خارج کنید.&lt;/p&gt;
 &lt;p&gt;از طریق خط فرمان به دایرکتوری سورس کد cd و دستور زیر رو اجرا کنید:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo make install
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo make install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
@@ -44,6 +44,17 @@
 &lt;p&gt;که به صورت زیر نمایش داده میشه و با انتخاب هر کدوم از گزینه‌ها، گزینه‌ی انتخابی رو توی خروجی ترمینال چاپ می‌کنه.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="dmenu2" src="../images/dmenu-intro/dmenu-example-1.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;البته احتمالا نوع و سایز فونت برای شما متفاوت باشه که در ادامه نحوه‌ی تغییر دادنش رو خواهم گفت.&lt;/p&gt;
+&lt;h2&gt;تغییر فونت&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ dmenu_run -fn &lt;span class="s1"&gt;&amp;#39;NotoMonoRegular:bold:pixelsize=30&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;نمایش به صورت لیست عمودی&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ dmenu_run -l &lt;span class="m"&gt;10&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;که عدد ۱۰ طول لیست رو مشخص میکنه.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;a name="footnote1"&gt;1&lt;/a&gt; : هدف پروژه‌ی &lt;a href="https://suckless.org"&gt;Suckless&lt;/a&gt; همونجوری که در شعار صفحه‌ی اول وبسایتشون نوشته شده، تولید نرم‌افزارهایی هست که کمتر بد باشن (software that sucks less). تمرکزشون رو روی سادگی و بهینگی کدهاشون گذاشتن و شدیدا در این مورد سختگیرن.&lt;/p&gt;</content><category term="چرا لینوکس؟"></category><category term="ابزار"></category><category term="dmenu"></category><category term="suckless"></category></entry><entry><title>بهبود کیفیت زندگی از حیث ابزراآلات مورد استفاده</title><link href="/qip.html" rel="alternate"></link><published>2020-08-25T16:20:00+04:30</published><updated>2020-08-25T16:20:00+04:30</updated><author><name>محسن برزگر</name></author><id>tag:None,2020-08-25:/qip.html</id><summary type="html">&lt;p&gt;ابزارها و تکنولوژی هایی که دوستشون دارم و هر روز ازشون استفاده می‌کنم و سعی می‌کنم اینجا معرفیشون کنم&lt;/p&gt;</summary><content type="html">&lt;p&gt;ابزارها و تکنولوژی هایی که دوستشون دارم و هر روز ازشون استفاده می‌کنم و سعی می‌کنم اینجا معرفیشون کنم:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Tiling_window_manager"&gt; مدیر پنجره‌ی کاشی‌گرا&lt;/a&gt;  به جای &lt;a href="https://fa.wikipedia.org/wiki/%D9%85%D8%AD%DB%8C%D8%B7_%D8%B1%D9%88%D9%85%DB%8C%D8%B2%DB%8C"&gt;محیط دسکتاپ&lt;/a&gt;&lt;/p&gt;

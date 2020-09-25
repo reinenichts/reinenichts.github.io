@@ -9,7 +9,8 @@
         <meta name="author" content="محسن برزگر">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/theme/css/rdark.css" />
+
+        <link rel="stylesheet" href="/theme/css/highlight/shell/styles/default.css">
 
             <link href="/static/custom.css" rel="stylesheet">
 
@@ -46,18 +47,18 @@
 <li>نصب در آرچ:</li>
 </ul>
 <p>طبق <a href="https://wiki.archlinux.org/index.php/Dmenu#Installation">توضیحات ویکی آرچ</a> میتونید dmenu رو از مخازن اصلی آرچ در <a href="https://www.archlinux.org/packages/?name=dmenu">dmenu</a> یا از مخازن کاربران آرچ (aur) در <a href="https://aur.archlinux.org/packages/dmenu-git/">dmenu-git</a> با دستورهای زیر نصب کنید:</p>
-<div class="highlight"><pre><span></span><code>sudo pacman -S dmenu
+<div class="highlight"><pre><span></span><code>$ sudo pacman -S dmenu
 </code></pre></div>
 
 
-<div class="highlight"><pre><span></span><code>yay -Syy dmenu-git
+<div class="highlight"><pre><span></span><code>$ yay -Syy dmenu-git
 </code></pre></div>
 
 
 <ul>
 <li>نصب در اوبونتو:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>sudo apt install dmenu
+<div class="highlight"><pre><span></span><code>$ sudo apt install dmenu
 </code></pre></div>
 
 
@@ -66,7 +67,7 @@
 </ul>
 <p><a href="https://tools.suckless.org/dmenu/">سورس</a> رو دانلود و از حالت فشرده خارج کنید.</p>
 <p>از طریق خط فرمان به دایرکتوری سورس کد cd و دستور زیر رو اجرا کنید:</p>
-<div class="highlight"><pre><span></span><code>sudo make install
+<div class="highlight"><pre><span></span><code>$ sudo make install
 </code></pre></div>
 
 
@@ -80,6 +81,17 @@
 <p>که به صورت زیر نمایش داده میشه و با انتخاب هر کدوم از گزینه‌ها، گزینه‌ی انتخابی رو توی خروجی ترمینال چاپ می‌کنه.</p>
 <p><img alt="dmenu2" src="../images/dmenu-intro/dmenu-example-1.jpg"></p>
 <p>البته احتمالا نوع و سایز فونت برای شما متفاوت باشه که در ادامه نحوه‌ی تغییر دادنش رو خواهم گفت.</p>
+<h2>تغییر فونت</h2>
+<div class="highlight"><pre><span></span><code>$ dmenu_run -fn <span class="s1">&#39;NotoMonoRegular:bold:pixelsize=30&#39;</span>
+</code></pre></div>
+
+
+<h2>نمایش به صورت لیست عمودی</h2>
+<div class="highlight"><pre><span></span><code>$ dmenu_run -l <span class="m">10</span>
+</code></pre></div>
+
+
+<p>که عدد ۱۰ طول لیست رو مشخص میکنه.</p>
 <hr>
 <p><a name="footnote1">1</a> : هدف پروژه‌ی <a href="https://suckless.org">Suckless</a> همونجوری که در شعار صفحه‌ی اول وبسایتشون نوشته شده، تولید نرم‌افزارهایی هست که کمتر بد باشن (software that sucks less). تمرکزشون رو روی سادگی و بهینگی کدهاشون گذاشتن و شدیدا در این مورد سختگیرن.</p></div>
         <div id="article-details">
@@ -119,5 +131,8 @@
 </footer>        <address id="about">
                     با افتخار نیرو گرفته از <a href="http://pelican.notmyidea.org/">Pelican</a>
         </address>
+
+    <script src="/theme/css/highlight/shell/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

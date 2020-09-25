@@ -15,7 +15,7 @@
   line-height: 2;
 }
 
-pre {
+pre code {
     direction: ltr;
 }
 
