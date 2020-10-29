@@ -36,10 +36,39 @@
         <hr>
     <ul style="list-style-type:none">
             <li>
-                ~ <a href="/dmenu-intro.html" >dmenu: یک منوی کوچکِ پویا و فراتر از آن</a>
+                <i class="fa fa-pencil" aria-hidden="true"></i> <a href="/dmenu-intro.html" >dmenu: یک منوی کوچکِ پویا و فراتر از آن</a>
                 <span class="date">در پنجشنبه 06 شهریور 1399</span>
             </li>
     </ul>
+
+    <div>
+        <h3><i class="fa fa-link"></i> پیوند‌های مفید</h3>
+        <ul id="panjere" style="list-style-type:none">
+        </ul>
+    </div>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        var url = "https://panjere-sehraramiz.fandogh.cloud/random/json/5/";
+
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myArr = JSON.parse(this.responseText);
+                myFunction(myArr);
+            }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+
+        function myFunction(arr) {
+            var out = "";
+            for(var k in arr) {
+                out += '<li> <i class="fa fa-external-link" aria-hidden="true"></i> <a href="' + arr[k].url + '" target="_blank" style="target-new: tab;" >' +
+                arr[k].title + '</a></li>';
+            }
+            document.getElementById("panjere").innerHTML = out;
+        }
+    </script>
 
 
         <hr>
