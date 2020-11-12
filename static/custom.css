@@ -19,7 +19,7 @@ pre code {
     direction: ltr;
 }
 
-.article {
+.article, .gt-container {
     padding-inline-start: 5%;
     padding-inline-end: 5%;
     margin-left: auto;
