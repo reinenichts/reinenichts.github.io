@@ -1,0 +1,156 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>dmenu: یک منوی کوچکِ پویا و فراتر از آن — سحرارآمیز</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="محسن برزگر">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="/theme/css/highlight/shell/styles/default.css">
+
+            <link href="/static/custom.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="سحرارآمیز ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+    </head>
+    <body>
+        <h1 style="text-align:center"><a href="/">سحرارآمیز</a></h1>
+        <hr>
+        <nav>
+            <i class="fa fa-link"></i>
+            <a href="/">خانه</a>
+            ,
+               <a href="/pages/about.html" >درباره</a>
+            <br>
+            <i class="fa fa-folder-open"></i>
+                <a href="/category/bdwn-mwdw.html" >بدون موضوع</a>
+                  ,
+                <a href="/category/chr-lynwkhs.html" >چرا لینوکس؟</a>
+        </nav>
+        <hr>
+    <div class="article">
+        <h1 class="article-title">dmenu: یک منوی کوچکِ پویا و فراتر از آن</h1>
+        <div class="article-content"><p>dmenu یکی از ابزارهای پروژه‌ی <sup><a href="#footnote1">1</a></sup> Suckless هست که در نگاه عمومی ازش به عنوان یک منوی اجرا کننده‌ی برنامه‌ها در لینوکس یاد میشه. dmenu مثل بقیه‌ی نرم‌افزهایی که توسط suckless تولید شده سرعت بالایی داره و مهمتر اینکه کار ساده‌ای که برای انجامش ساخته شده رو به بهترین نحو انجام میده.</p>
+<p>طبق تعریف suckless، کار این برنامه ساخت واستفاده‌ی بهینه از منوهای تعریف شده توسط کاربر هست.  به این صورت که کاربر میتونه آیتم‌هایی رو در قالب یک لیست بهش بده و dmenu اون لیست رو نمایش میده و بر اساس آیتمی که توسط کاربر از لیست انتخاب میشه، واکنش نشون میده.</p>
+<p>کل ایده‌ی dmenu توی همین یک کارِ ساده خلاصه میشه. با همین روش یه لیست از کل برنامه‌های نصب شده روی سیستم میگیره و لیست رو روی صفحه به کاربر نشون می‌ده و برنامه‌ای که کاربر از لیست انتخاب میکنه رو اجرا میکنه. با بهترین و سریعترین و کم‌هزینه‌ترین کدی که تیم سازندش میتونسته تولید کنه.</p>
+<p><img id="dmenu1" src="../images/dmenu1.gif" alt="dmenu1"></p>
+<p>پس بر خلاف نگاه عمومی، توانایی این برنامه خیلی فراتر از یک "اجراکننده‌ی برنامه"ی ساده هست.</p>
+<hr>
+<h2>روش نصب</h2>
+<ul>
+<li>نصب در آرچ:</li>
+</ul>
+<p>طبق <a href="https://wiki.archlinux.org/index.php/Dmenu#Installation">توضیحات ویکی آرچ</a> میتونید dmenu رو از مخازن اصلی آرچ در <a href="https://www.archlinux.org/packages/?name=dmenu">dmenu</a> یا از مخازن کاربران آرچ (aur) در <a href="https://aur.archlinux.org/packages/dmenu-git/">dmenu-git</a> با دستورهای زیر نصب کنید:</p>
+<div class="highlight"><pre><span></span><code>$ sudo pacman -S dmenu
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code>$ yay -Syy dmenu-git
+</code></pre></div>
+
+
+<ul>
+<li>نصب در اوبونتو:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ sudo apt install dmenu
+</code></pre></div>
+
+
+<ul>
+<li>نصب از سورس کد:</li>
+</ul>
+<p><a href="https://tools.suckless.org/dmenu/">سورس</a> رو دانلود و از حالت فشرده خارج کنید.</p>
+<p>از طریق خط فرمان به دایرکتوری سورس کد cd و دستور زیر رو اجرا کنید:</p>
+<div class="highlight"><pre><span></span><code>$ sudo make install
+</code></pre></div>
+
+
+<p>و نصب انجام شده میتونیم با اجرای دستور dmenu_run برنامه رو اجرا کنیم.</p>
+<h2>یک مثال ساده</h2>
+<p>گفتیم که آیتم‌هایی رو میتونیم به dmenu پاس بدیم و dmenu اون‌ها رو در قالب یک منو به ما نمایش میده. این آیتم‌ها رو به روش‌های مختلفی میتونیم به خورد dmenu بدیم. dmenu هم مثل خیلی از برنامه‌های یونیکس/گنو/لینوکس از قابلیت <a href="https://fa.wikipedia.org/wiki/%D9%84%D9%88%D9%84%D9%87%E2%80%8C%DA%A9%D8%B4%DB%8C_%28%DB%8C%D9%88%D9%86%DB%8C%DA%A9%D8%B3%29">پایپینگ</a> (لوله‌کشی، piping) بهره میبره. یعنی مثلا میتونیم یک متن شامل سه خط رو به عنوان یک لیست سه آیتمی به شکل زیر بهش بدیم:</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">echo</span> -e <span class="s2">&quot;first\nsecond\nthird&quot;</span> <span class="p">|</span> dmenu
+</code></pre></div>
+
+
+<p>که به صورت زیر نمایش داده میشه و با انتخاب هر کدوم از گزینه‌ها، گزینه‌ی انتخابی رو توی خروجی ترمینال چاپ می‌کنه.</p>
+<p><img alt="dmenu2" src="../images/dmenu-intro/dmenu-example-1.jpg"></p>
+<p>البته احتمالا نوع و سایز فونت برای شما متفاوت باشه که در ادامه نحوه‌ی تغییر دادنش رو خواهم گفت.</p>
+<h2>تغییر فونت</h2>
+<div class="highlight"><pre><span></span><code>$ dmenu_run -fn <span class="s1">&#39;NotoMonoRegular:bold:pixelsize=30&#39;</span>
+</code></pre></div>
+
+
+<h2>نمایش به صورت لیست عمودی</h2>
+<div class="highlight"><pre><span></span><code>$ dmenu_run -l <span class="m">10</span>
+</code></pre></div>
+
+
+<p>که عدد ۱۰ طول لیست رو مشخص میکنه.</p>
+<p>خروجی دستور تغییر فونت و نمایش عمودی رو میتونید در <a href="#dmenu1">این تصویر</a> ببینید.</p>
+<hr>
+<p><a name="footnote1">1</a> : هدف پروژه‌ی <a href="https://suckless.org">Suckless</a> همونجوری که در شعار صفحه‌ی اول وبسایتشون نوشته شده، تولید نرم‌افزارهایی هست که کمتر بد باشن (software that sucks less). تمرکزشون رو روی سادگی و بهینگی کدهاشون گذاشتن و شدیدا در این مورد سختگیرن.</p></div>
+        <div id="article-details">
+            <div>
+                <i class="fa fa-calendar"></i>
+                <span>پنجشنبه 06 شهریور 1399</span>
+            </div>
+            <div>
+                <i class="fa fa-folder-open"></i>
+                <span itemprop="articleSection">
+                    <a href="/category/chr-lynwkhs.html" rel="category">چرا لینوکس؟</a>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-tag"></i>
+                <span itemprop="keywords">
+                    <a href="/tag/bzr.html" rel="tag">ابزار</a>
+                </span>
+                <span itemprop="keywords">
+                    <a href="/tag/dmenu.html" rel="tag">dmenu</a>
+                </span>
+                <span itemprop="keywords">
+                    <a href="/tag/suckless.html" rel="tag">suckless</a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: '663c884dbf987d66cbf9',
+          clientSecret: '585d9ededb0d8941db049747d469d3a32e560d06',
+          repo: 'sehraramiz-comments',      // The repository of store comments,
+          owner: 'sehraramiz',
+          admin: ['sehraramiz'],
+          id: location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    </script>
+
+
+        <hr>
+    </section>
+ <footer class="links">
+    تماس :
+    <i class="fa fa-telegram"> <a href = "https://t.me/sehraramiz">تلگرام</a></i>
+    &nbsp;
+    <i class="fa fa-github-alt"> <a href="https://github.com/sehraramiz/sehraramiz.github.io-src">گیت‌هاب</a></i>
+</footer>        <address id="about">
+                    با افتخار نیرو گرفته از <a href="http://pelican.notmyidea.org/">Pelican</a>
+        </address>
+
+    <script src="/theme/css/highlight/shell/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

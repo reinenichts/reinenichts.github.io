@@ -1,0 +1,87 @@
+@font-face {
+  font-family: Vazir;
+  src: url(Vazir.ttf);
+}
+
+@font-face {
+  font-family: Sans;
+  src: url(Iranian-Sans.ttf);
+}
+
+* {
+  font-family: Sans;
+  direction: rtl;
+  font-size: medium;
+  line-height: 2;
+}
+
+pre code {
+    direction: ltr;
+}
+
+.article {
+    padding-inline-start: 5%;
+    padding-inline-end: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+.article hr {
+    border-top: 1px solid  gray;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    height: 1px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    object-fit: cover ;
+    max-width: 100%;
+}
+
+blockquote {
+  font: 14px/20px italic Times, serif;
+  padding: 8px;
+  background-color: #feffed;
+  border-top: 1px solid #e1cc89;
+  border-bottom: 1px solid #e1cc89;
+  margin: 5px;
+  background-image: url(images/openquote1.gif);
+  background-position: top left;
+  background-repeat: no-repeat;
+  text-indent: 23px;
+  }
+  blockquote.style1 span {
+     display: block;
+     background-image: url(images/closequote1.gif);
+     background-repeat: no-repeat;
+     background-position: bottom right;
+   }
+
+#about {
+    font-size: small;
+}
+
+#article-details {
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+#article-details * {
+    font-size: medium;
+}
+
+.date {
+    font-size: small;
+}
+
+footer.links * {
+    font-size: medium;
+}
+
+hr {
+    border: 1px dashed  gray;
+}
