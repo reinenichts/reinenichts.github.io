@@ -84,6 +84,7 @@
             }
         };
         xmlhttp.open("GET", url, true);
+        xmlhttp.setRequestHeader('Accept', 'application/json');
         xmlhttp.send();
 
         function myFunction(arr) {
