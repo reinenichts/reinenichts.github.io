@@ -78,7 +78,7 @@
         function myFunction(arr) {
             var out = "";
             for(var k in arr) {
-                out += '<li> <i class="fa fa-external-link" aria-hidden="true"></i> <a href="' + arr[k].url + '" target="_blank" style="target-new: tab;" >' +
+                out += '<li> <i class="fa fa-external-link" aria-hidden="true"></i> <a href="' + arr[k].text + '" target="_blank" style="target-new: tab;" >' +
                 arr[k].title + '</a></li>';
             }
             document.getElementById("panjere").innerHTML = out;
