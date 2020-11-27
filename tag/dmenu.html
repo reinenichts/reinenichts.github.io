@@ -75,9 +75,9 @@
         .then(res => res.json())
         .then((links) => {
             var out = "";
-            for(var link in links) {
-                out += '<li> <i class="fa fa-external-link" aria-hidden="true"></i> <a href="' + links[link].url + '" target="_blank" style="target-new: tab;" >' +
-                links[link].title + '</a></li>';
+            for(var link of links) {
+                out += '<li> <i class="fa fa-external-link" aria-hidden="true"></i> <a href="' + link.text + '" target="_blank" style="target-new: tab;" >' +
+                link.title + '</a></li>';
         }
         document.getElementById("panjere").innerHTML = out;
         })

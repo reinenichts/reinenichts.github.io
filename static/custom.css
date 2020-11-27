@@ -67,11 +67,11 @@ blockquote {
 
 #article-details {
     border: 1px solid gray;
-    padding: 20px;
+    padding: 10px;
 }
 
 #article-details * {
-    font-size: medium;
+    font-size: small;
 }
 
 .date {
