@@ -45,15 +45,11 @@
 <p>با نصب dmenu یک برنامه‌ی دیگه هم به سیستمتون اضافه میشه به نام dmenu_path که خروجیش یه لیست بلند بالا از برنامه‌هایی هست که در تمام مسیر‌های سیستم (pathها) قرار دارن.</p>
 <p>دستور dmenu_run از همین لیست استفاده میکنه و برنامه‌ای که از لیست انتخاب میکنیم رو برامون اجرا میکنه.</p>
 <p>حالا برای آشنایی بیشتر با نحوه‌ی عملکرد dmenu سعی میکنم از همین لیست خروجی dmenu_path استفاده کنم و یه اسکریپت شبیه dmenu_run بنویسم.</p>
-<div class="highlight"><pre><span></span><code>dmenu_path <span class="p">|</span> head -30 <span class="p">|</span> dmenu -p <span class="s2">&quot;Which program to run? &quot;</span>
+<div class="highlight"><pre><span></span><code>$ <span class="k">$(</span>dmenu_path <span class="p">|</span> head -30 <span class="p">|</span> dmenu -p <span class="s2">&quot;Which program to run? &quot;</span><span class="k">)</span>
 </code></pre></div>
 
 
 <p>دستور بالا لیستی از اسامی ۳۰ برنامه‌ی اول خروجی dmenu_path رو بهمون نشون میده که هربرنامه‌ای رو که انتخاب کنیم اجرا میشه.</p>
-<div class="highlight"><pre><span></span><code>dmenu -p <span class="err">&#39;</span>Which program to run
-</code></pre></div>
-
-
 <p>تفاوتی که این اسکریپت با dmenu_run داره گزینه‌ی p- هست. این گزینه باعث میشه که در کنار منویی که dmenu نمایش میده یک جمله هم نشون داده شه.</p>
 <p><img alt="dmenu2" src="../images/dmenu-samples/dmenu_run_clone.jpg"></p>
 <p>برای انجام اعمال پیچیده‌تر و راحت شدن کارمون دستور بالا رو به یه اسکریپت بش تبدیل میکنیم.</p>

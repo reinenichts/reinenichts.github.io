@@ -4,15 +4,11 @@
 &lt;p&gt;با نصب dmenu یک برنامه‌ی دیگه هم به سیستمتون اضافه میشه به نام dmenu_path که خروجیش یه لیست بلند بالا از برنامه‌هایی هست که در تمام مسیر‌های سیستم (pathها) قرار دارن.&lt;/p&gt;
 &lt;p&gt;دستور dmenu_run از همین لیست استفاده میکنه و برنامه‌ای که از لیست انتخاب میکنیم رو برامون اجرا میکنه.&lt;/p&gt;
 &lt;p&gt;حالا برای آشنایی بیشتر با نحوه‌ی عملکرد dmenu سعی میکنم از همین لیست خروجی dmenu_path استفاده کنم و یه اسکریپت شبیه dmenu_run بنویسم.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;dmenu_path &lt;span class="p"&gt;|&lt;/span&gt; head -30 &lt;span class="p"&gt;|&lt;/span&gt; dmenu -p &lt;span class="s2"&gt;&amp;quot;Which program to run? &amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ &lt;span class="k"&gt;$(&lt;/span&gt;dmenu_path &lt;span class="p"&gt;|&lt;/span&gt; head -30 &lt;span class="p"&gt;|&lt;/span&gt; dmenu -p &lt;span class="s2"&gt;&amp;quot;Which program to run? &amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;دستور بالا لیستی از اسامی ۳۰ برنامه‌ی اول خروجی dmenu_path رو بهمون نشون میده که هربرنامه‌ای رو که انتخاب کنیم اجرا میشه.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;dmenu -p &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;Which program to run
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;تفاوتی که این اسکریپت با dmenu_run داره گزینه‌ی p- هست. این گزینه باعث میشه که در کنار منویی که dmenu نمایش میده یک جمله هم نشون داده شه.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="dmenu2" src="../images/dmenu-samples/dmenu_run_clone.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;برای انجام اعمال پیچیده‌تر و راحت شدن کارمون دستور بالا رو به یه اسکریپت بش تبدیل میکنیم.&lt;/p&gt;
