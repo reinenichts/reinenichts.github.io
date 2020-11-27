@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>کار با dmenu، اسکریپت‌هایی ابتدایی — سحرارآمیز</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="محسن برزگر">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="/theme/css/highlight/shell/styles/default.css">
+
+            <link href="/static/custom.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="سحرارآمیز ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+    </head>
+    <body>
+        <h1 style="text-align:center"><a href="/">سحرارآمیز</a></h1>
+        <hr>
+        <nav>
+            <i class="fa fa-link"></i>
+            <a href="/">خانه</a>
+            ,
+               <a href="/pages/about.html" >درباره</a>
+            ,
+            <a style="color: orange;" href="feeds/all.rss.xml">RSS</a>
+            <br>
+            <i class="fa fa-folder-open"></i>
+                <a href="/category/bdwn-mwdw.html" >بدون موضوع</a>
+                  ,
+                <a href="/category/chr-lynwkhs.html" >چرا لینوکس؟</a>
+        </nav>
+        <hr>
+    <div class="article">
+        <h1 class="article-title">کار با dmenu، اسکریپت‌هایی ابتدایی</h1>
+        <div class="article-content"><h3>dmenu_path</h3>
+<p>در مطلب قبلی اشاره کردم که عملکرد اصلی dmenu به عنوان یک منوی پویا نشون دادن لیستی از برنامه‌های نصب شده روی سیستم (فایل‌های اجرایی) و اجرا کردنشون هست.</p>
+<p>با نصب dmenu یک برنامه‌ی دیگه هم به سیستمتون اضافه میشه به نام dmenu_path که خروجیش یه لیست بلند بالا از برنامه‌هایی هست که در تمام مسیر‌های سیستم (pathها) قرار دارن.</p>
+<p>دستور dmenu_run از همین لیست استفاده میکنه و برنامه‌ای که از لیست انتخاب میکنیم رو برامون اجرا میکنه.</p>
+<p>حالا برای آشنایی بیشتر با نحوه‌ی عملکرد dmenu سعی میکنم از همین لیست خروجی dmenu_path استفاده کنم و یه اسکریپت شبیه dmenu_run بنویسم.</p>
+<div class="highlight"><pre><span></span><code>dmenu_path <span class="p">|</span> head -30 <span class="p">|</span> dmenu -p <span class="s2">&quot;Which program to run? &quot;</span>
+</code></pre></div>
+
+
+<p>دستور بالا لیستی از اسامی ۳۰ برنامه‌ی اول خروجی dmenu_path رو بهمون نشون میده که هربرنامه‌ای رو که انتخاب کنیم اجرا میشه.</p>
+<div class="highlight"><pre><span></span><code>dmenu -p <span class="err">&#39;</span>Which program to run
+</code></pre></div>
+
+
+<p>تفاوتی که این اسکریپت با dmenu_run داره گزینه‌ی p- هست. این گزینه باعث میشه که در کنار منویی که dmenu نمایش میده یک جمله هم نشون داده شه.</p>
+<p><img alt="dmenu2" src="../images/dmenu-samples/dmenu_run_clone.jpg"></p>
+<p>برای انجام اعمال پیچیده‌تر و راحت شدن کارمون دستور بالا رو به یه اسکریپت بش تبدیل میکنیم.</p>
+<script src="https://gist.github.com/sehraramiz/f98d9e520a43883ed764eefd36ba06c4.js"></script>
+
+<h3>جایی که dmenu جذاب میشه</h3>
+<p>کم‌ کم زیبایی و ظرافت dmenu داره نمایان میشه. جذابیت dmenu وقتی مشخص میشه که ازش در کنار دیگر ابزار سیستم‌همون استفاده کنیم.</p>
+<p>مثلا منویی از یه سری اسکریپت که ازشون استفاده میکنیم درست کنیم و براش یه کلید میانبر تعریف کنیم و با انتخاب یک گزینه از منو اسکریپت مربوط بهش رو اجرا کنیم.</p>
+<p>یا لیستی از پلی‌لیست‌های آهنگهامون رو بهمون نشون بده و بعد از انتخاب برامون پخشش کنه. بیاید همین دومی رو بسازیم.</p>
+<p>برای ساختن این برنامه یه لیست از پلی لیستامون نیاز داریم که بتونیم اون و به dmenu بدیم و پلی‌لیستی که انتخاب میشه رو با مثلا vlc اجرا کنیم.</p>
+<p>از اجزای همون اسکریپت بش بالا استفاده میکنم.</p>
+<script src="https://gist.github.com/sehraramiz/c60387ac33e115edca24ba6639ba8ffc.js"></script>
+
+<p><img alt="dj" src="../images/dmenu-samples/dmenu_dj.jpg"></p></div>
+        <div id="article-details">
+            <div>
+                <i class="fa fa-calendar"></i>
+                <span>جمعه 07 آذر 1399</span>
+            </div>
+            <div>
+                <i class="fa fa-folder-open"></i>
+                <span itemprop="articleSection">
+                    <a href="/category/chr-lynwkhs.html" rel="category">چرا لینوکس؟</a>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-tag"></i>
+                <span itemprop="keywords">
+                    <a href="/tag/bzr.html" rel="tag">ابزار</a>
+                </span>
+                <span itemprop="keywords">
+                    <a href="/tag/dmenu.html" rel="tag">dmenu</a>
+                </span>
+                <span itemprop="keywords">
+                    <a href="/tag/suckless.html" rel="tag">suckless</a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: '663c884dbf987d66cbf9',
+          clientSecret: '585d9ededb0d8941db049747d469d3a32e560d06',
+          repo: 'sehraramiz-comments',      // The repository of store comments,
+          owner: 'sehraramiz',
+          admin: ['sehraramiz'],
+          id: location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    </script>
+
+
+        <hr>
+    </section>
+ <footer class="links">
+    تماس :
+    <i class="fa fa-telegram"> <a href = "https://t.me/sehraramiz">تلگرام</a></i>
+    &nbsp;
+    <i class="fa fa-github-alt"> <a href="https://github.com/sehraramiz/sehraramiz.github.io-src">گیت‌هاب</a></i>
+</footer>        <address id="about">
+                    با افتخار نیرو گرفته از <a href="http://pelican.notmyidea.org/">Pelican</a>
+        </address>
+
+    <script src="/theme/css/highlight/shell/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

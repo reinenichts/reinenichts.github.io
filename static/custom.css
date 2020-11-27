@@ -85,3 +85,7 @@ footer.links * {
 hr {
     border: 1px dashed  gray;
 }
+
+.gist * {
+    direction: ltr;
+}

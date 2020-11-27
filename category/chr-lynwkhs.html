@@ -39,6 +39,10 @@
     <h3>- نوشته‌ها</h3>
     <ul style="list-style-type:none">
             <li>
+                <i class="fa fa-pencil" aria-hidden="true"></i> <a href="/dmenu-samples-1.html" >کار با dmenu، اسکریپت‌هایی ابتدایی</a>
+                <span class="date">در جمعه 07 آذر 1399</span>
+            </li>
+            <li>
                 <i class="fa fa-pencil" aria-hidden="true"></i> <a href="/dmenu-intro.html" >dmenu: یک منوی کوچکِ پویا و فراتر از آن</a>
                 <span class="date">در پنجشنبه 06 شهریور 1399</span>
             </li>
@@ -62,27 +66,25 @@
     </div>
 
     <script>
-        var xmlhttp = new XMLHttpRequest();
-        var url = "https://panjere-sehraramiz.fandogh.cloud/api/random/5/";
 
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var myArr = JSON.parse(this.responseText);
-                myFunction(myArr);
-            }
-        };
-        xmlhttp.open("GET", url, true);
-        xmlhttp.setRequestHeader('Accept', 'application/json');
-        xmlhttp.send();
+        const URL = 'https://panjere-sehraramiz.fandogh.cloud/api/random/5/'
+        const myHeaders = new Headers();
+        myHeaders.append('Accept', 'application/json');
 
-        function myFunction(arr) {
+        fetch(URL, {
+            method: "GET",
+            headers: myHeaders,
+        })
+        .then(res => res.json())
+        .then((links) => {
             var out = "";
-            for(var k in arr) {
-                out += '<li> <i class="fa fa-external-link" aria-hidden="true"></i> <a href="' + arr[k].text + '" target="_blank" style="target-new: tab;" >' +
-                arr[k].title + '</a></li>';
-            }
-            document.getElementById("panjere").innerHTML = out;
+            for(var link in links) {
+                out += '<li> <i class="fa fa-external-link" aria-hidden="true"></i> <a href="' + links[link].url + '" target="_blank" style="target-new: tab;" >' +
+                links[link].title + '</a></li>';
         }
+        document.getElementById("panjere").innerHTML = out;
+        })
+
     </script>
 
 

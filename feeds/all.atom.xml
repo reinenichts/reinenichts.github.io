@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>سحرارآمیز</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-08-27T22:50:00+04:30</updated><entry><title>dmenu: یک منوی کوچکِ پویا و فراتر از آن</title><link href="/dmenu-intro.html" rel="alternate"></link><published>2020-08-27T22:50:00+04:30</published><updated>2020-08-27T22:50:00+04:30</updated><author><name>محسن برزگر</name></author><id>tag:None,2020-08-27:/dmenu-intro.html</id><summary type="html">&lt;p&gt;dmenu&lt;/p&gt;</summary><content type="html">&lt;p&gt;dmenu یکی از ابزارهای پروژه‌ی &lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt; Suckless هست که در نگاه عمومی ازش به عنوان یک منوی اجرا کننده‌ی برنامه‌ها در لینوکس یاد میشه. dmenu مثل بقیه‌ی نرم‌افزهایی که توسط suckless تولید شده سرعت بالایی داره و مهمتر اینکه کار ساده‌ای که برای انجامش ساخته شده رو به بهترین نحو انجام میده.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>سحرارآمیز</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-11-27T10:15:00+03:30</updated><entry><title>کار با dmenu، اسکریپت‌هایی ابتدایی</title><link href="/dmenu-samples-1.html" rel="alternate"></link><published>2020-11-27T10:15:00+03:30</published><updated>2020-11-27T10:15:00+03:30</updated><author><name>محسن برزگر</name></author><id>tag:None,2020-11-27:/dmenu-samples-1.html</id><summary type="html">&lt;p&gt;نمونه اسکریپت dmenu&lt;/p&gt;</summary><content type="html">&lt;h3&gt;dmenu_path&lt;/h3&gt;
+&lt;p&gt;در مطلب قبلی اشاره کردم که عملکرد اصلی dmenu به عنوان یک منوی پویا نشون دادن لیستی از برنامه‌های نصب شده روی سیستم (فایل‌های اجرایی) و اجرا کردنشون هست.&lt;/p&gt;
+&lt;p&gt;با نصب dmenu یک برنامه‌ی دیگه هم به سیستمتون اضافه میشه به نام dmenu_path که خروجیش یه لیست بلند بالا از برنامه‌هایی هست که در تمام مسیر‌های سیستم (pathها) قرار دارن.&lt;/p&gt;
+&lt;p&gt;دستور dmenu_run از همین لیست استفاده میکنه و برنامه‌ای که از لیست انتخاب میکنیم رو برامون اجرا میکنه.&lt;/p&gt;
+&lt;p&gt;حالا برای آشنایی بیشتر با نحوه‌ی عملکرد dmenu سعی میکنم از همین لیست خروجی dmenu_path استفاده کنم و یه اسکریپت شبیه dmenu_run بنویسم.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;dmenu_path &lt;span class="p"&gt;|&lt;/span&gt; head -30 &lt;span class="p"&gt;|&lt;/span&gt; dmenu -p &lt;span class="s2"&gt;&amp;quot;Which program to run? &amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;دستور بالا لیستی از اسامی ۳۰ برنامه‌ی اول خروجی dmenu_path رو بهمون نشون میده که هربرنامه‌ای رو که انتخاب کنیم اجرا میشه.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;dmenu -p &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;Which program to run
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;تفاوتی که این اسکریپت با dmenu_run داره گزینه‌ی p- هست. این گزینه باعث میشه که در کنار منویی که dmenu نمایش میده یک جمله هم نشون داده شه.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="dmenu2" src="../images/dmenu-samples/dmenu_run_clone.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;برای انجام اعمال پیچیده‌تر و راحت شدن کارمون دستور بالا رو به یه اسکریپت بش تبدیل میکنیم.&lt;/p&gt;
+&lt;script src="https://gist.github.com/sehraramiz/f98d9e520a43883ed764eefd36ba06c4.js"&gt;&lt;/script&gt;
+
+&lt;h3&gt;جایی که dmenu جذاب میشه&lt;/h3&gt;
+&lt;p&gt;کم‌ کم زیبایی و ظرافت dmenu داره نمایان میشه. جذابیت dmenu وقتی مشخص میشه که ازش در کنار دیگر ابزار سیستم‌همون استفاده کنیم.&lt;/p&gt;
+&lt;p&gt;مثلا منویی از یه سری اسکریپت که ازشون استفاده میکنیم درست کنیم و براش یه کلید میانبر تعریف کنیم و با انتخاب یک گزینه از منو اسکریپت مربوط بهش رو اجرا کنیم.&lt;/p&gt;
+&lt;p&gt;یا لیستی از پلی‌لیست‌های آهنگهامون رو بهمون نشون بده و بعد از انتخاب برامون پخشش کنه. بیاید همین دومی رو بسازیم.&lt;/p&gt;
+&lt;p&gt;برای ساختن این برنامه یه لیست از پلی لیستامون نیاز داریم که بتونیم اون و به dmenu بدیم و پلی‌لیستی که انتخاب میشه رو با مثلا vlc اجرا کنیم.&lt;/p&gt;
+&lt;p&gt;از اجزای همون اسکریپت بش بالا استفاده میکنم.&lt;/p&gt;
+&lt;script src="https://gist.github.com/sehraramiz/c60387ac33e115edca24ba6639ba8ffc.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;img alt="dj" src="../images/dmenu-samples/dmenu_dj.jpg"&gt;&lt;/p&gt;</content><category term="چرا لینوکس؟"></category><category term="ابزار"></category><category term="dmenu"></category><category term="suckless"></category></entry><entry><title>dmenu: یک منوی کوچکِ پویا و فراتر از آن</title><link href="/dmenu-intro.html" rel="alternate"></link><published>2020-08-27T22:50:00+04:30</published><updated>2020-08-27T22:50:00+04:30</updated><author><name>محسن برزگر</name></author><id>tag:None,2020-08-27:/dmenu-intro.html</id><summary type="html">&lt;p&gt;dmenu&lt;/p&gt;</summary><content type="html">&lt;p&gt;dmenu یکی از ابزارهای پروژه‌ی &lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt; Suckless هست که در نگاه عمومی ازش به عنوان یک منوی اجرا کننده‌ی برنامه‌ها در لینوکس یاد میشه. dmenu مثل بقیه‌ی نرم‌افزهایی که توسط suckless تولید شده سرعت بالایی داره و مهمتر اینکه کار ساده‌ای که برای انجامش ساخته شده رو به بهترین نحو انجام میده.&lt;/p&gt;
 &lt;p&gt;طبق تعریف suckless، کار این برنامه ساخت واستفاده‌ی بهینه از منوهای تعریف شده توسط کاربر هست.  به این صورت که کاربر میتونه آیتم‌هایی رو در قالب یک لیست بهش بده و dmenu اون لیست رو نمایش میده و بر اساس آیتمی که توسط کاربر از لیست انتخاب میشه، واکنش نشون میده.&lt;/p&gt;
 &lt;p&gt;کل ایده‌ی dmenu توی همین یک کارِ ساده خلاصه میشه. با همین روش یه لیست از کل برنامه‌های نصب شده روی سیستم میگیره و لیست رو روی صفحه به کاربر نشون می‌ده و برنامه‌ای که کاربر از لیست انتخاب میکنه رو اجرا میکنه. با بهترین و سریعترین و کم‌هزینه‌ترین کدی که تیم سازندش میتونسته تولید کنه.&lt;/p&gt;
 &lt;p&gt;&lt;img id="dmenu1" src="../images/dmenu1.gif" alt="dmenu1"&gt;&lt;/p&gt;
