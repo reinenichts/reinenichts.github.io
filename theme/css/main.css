@@ -13,7 +13,7 @@ body {
 }
 
 a:link    { color: blue; text-decoration: none;      }
-a:hover   { color: blue; text-decoration: underline; }
+a:hover   { color: blue; text-decoration: none; }
 a:visited { color: blue;                             }
 
 h1 a { color: inherit !important }
