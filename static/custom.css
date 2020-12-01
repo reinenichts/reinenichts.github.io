@@ -11,7 +11,6 @@
 * {
   font-family: Sans;
   direction: rtl;
-  font-size: medium;
   line-height: 2;
 }
 
@@ -83,7 +82,7 @@ footer.links * {
 }
 
 hr {
-    border: 1px dashed  gray;
+    opacity: 0.3;
 }
 
 .gist * {
