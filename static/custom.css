@@ -88,3 +88,12 @@ hr {
 .gist * {
     direction: ltr;
 }
+
+.fa-telegram {color: #0e6b5e;}
+.fa-link {color: #d4212a;}
+.fa-folder-open {color: #d4c22a;}
+.fa-github-alt {color: #c12a20;}
+.fa-external-link {color: #6d0c77;}
+.fa-magic {color: #c34c87;}
+.fa-window-maximize {color: #85afa6;}
+.fa-pencil {color: #6e4516;}
