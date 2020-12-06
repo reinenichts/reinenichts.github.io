@@ -9,10 +9,11 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 700px;
+  border: 2px solid #ddd;
 }
 
 a:link    { color: blue; text-decoration: none;      }
-a:hover   { color: blue; text-decoration: none; }
+a:hover   { color: blue; text-decoration: underline; }
 a:visited { color: blue;                             }
 
 h1 a { color: inherit !important }
