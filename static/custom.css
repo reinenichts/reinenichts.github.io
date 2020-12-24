@@ -42,23 +42,10 @@ img {
 }
 
 blockquote {
-  font: 14px/20px italic Times, serif;
-  padding: 8px;
-  background-color: #feffed;
-  border-top: 1px solid #e1cc89;
-  border-bottom: 1px solid #e1cc89;
-  margin: 5px;
-  background-image: url(images/openquote1.gif);
-  background-position: top left;
-  background-repeat: no-repeat;
-  text-indent: 23px;
-  }
-  blockquote.style1 span {
-     display: block;
-     background-image: url(images/closequote1.gif);
-     background-repeat: no-repeat;
-     background-position: bottom right;
-   }
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  text-indent: 5px;
+}
 
 #about {
     font-size: small;
@@ -87,4 +74,8 @@ hr {
 
 .gist {
     direction: ltr;
+}
+
+ul {
+    font-size: small;
 }
