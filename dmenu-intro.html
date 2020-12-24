@@ -25,14 +25,12 @@
         <h1 style="text-align:center"><a href="/">سحرارآمیز</a></h1>
         <hr>
         <nav>
-            <i class="fa fa-link"></i>
             <a href="/">خانه</a>
             ,
                <a href="/pages/about.html" >درباره</a>
             ,
-            <a style="color: orange;" href="feeds/all.rss.xml">آر اِس اِس</a>
+            <a style="color: orange;" href="/feeds/all.rss.xml">آر اِس اِس</a>
             <br>
-            <i class="fa fa-folder-open"></i>
                 <a href="/category/bdwn-mwdw.html" >بدون موضوع</a>
                   ,
                 <a href="/category/chr-lynwkhs.html" >چرا لینوکس؟</a>
@@ -54,17 +52,14 @@
 <div class="highlight"><pre><span></span><code>$ sudo pacman -S dmenu
 </code></pre></div>
 
-
 <div class="highlight"><pre><span></span><code>$ yay -Syy dmenu-git
 </code></pre></div>
-
 
 <ul>
 <li>نصب در اوبونتو:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>$ sudo apt install dmenu
 </code></pre></div>
-
 
 <ul>
 <li>نصب از سورس کد:</li>
@@ -74,13 +69,11 @@
 <div class="highlight"><pre><span></span><code>$ sudo make install
 </code></pre></div>
 
-
 <p>و نصب انجام شده میتونیم با اجرای دستور dmenu_run برنامه رو اجرا کنیم.</p>
 <h2>یک مثال ساده</h2>
 <p>گفتیم که آیتم‌هایی رو میتونیم به dmenu پاس بدیم و dmenu اون‌ها رو در قالب یک منو به ما نمایش میده. این آیتم‌ها رو به روش‌های مختلفی میتونیم به خورد dmenu بدیم. dmenu هم مثل خیلی از برنامه‌های یونیکس/گنو/لینوکس از قابلیت <a href="https://fa.wikipedia.org/wiki/%D9%84%D9%88%D9%84%D9%87%E2%80%8C%DA%A9%D8%B4%DB%8C_%28%DB%8C%D9%88%D9%86%DB%8C%DA%A9%D8%B3%29">پایپینگ</a> (لوله‌کشی، piping) بهره میبره. یعنی مثلا میتونیم یک متن شامل سه خط رو به عنوان یک لیست سه آیتمی به شکل زیر بهش بدیم:</p>
 <div class="highlight"><pre><span></span><code>$ <span class="nb">echo</span> -e <span class="s2">&quot;first\nsecond\nthird&quot;</span> <span class="p">|</span> dmenu
 </code></pre></div>
-
 
 <p>که به صورت زیر نمایش داده میشه و با انتخاب هر کدوم از گزینه‌ها، گزینه‌ی انتخابی رو توی خروجی ترمینال چاپ می‌کنه.</p>
 <p><img alt="dmenu2" src="../images/dmenu-intro/dmenu-example-1.jpg"></p>
@@ -89,11 +82,9 @@
 <div class="highlight"><pre><span></span><code>$ dmenu_run -fn <span class="s1">&#39;NotoMonoRegular:bold:pixelsize=30&#39;</span>
 </code></pre></div>
 
-
 <h2>نمایش به صورت لیست عمودی</h2>
 <div class="highlight"><pre><span></span><code>$ dmenu_run -l <span class="m">10</span>
 </code></pre></div>
-
 
 <p>که عدد ۱۰ طول لیست رو مشخص میکنه.</p>
 <p>خروجی دستور تغییر فونت و نمایش عمودی رو میتونید در <a href="#dmenu1">این تصویر</a> ببینید.</p>
@@ -145,9 +136,9 @@
     </section>
  <footer class="links">
     تماس :
-    <i class="fa fa-telegram"> <a href = "https://t.me/sehraramiz">تلگرام</a></i>
+    <a href = "https://t.me/sehraramiz">تلگرام</a></i>
     &nbsp;
-    <i class="fa fa-github-alt"> <a href="https://github.com/sehraramiz/sehraramiz.github.io-src">گیت‌هاب</a></i>
+    <a href="https://github.com/sehraramiz/sehraramiz.github.io-src">گیت‌هاب</a></i>
 </footer>        <address id="about">
                     با افتخار نیرو گرفته از <a href="https://docs.getpelican.com/">Pelican</a>
         </address>
