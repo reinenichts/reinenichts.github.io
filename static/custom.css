@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: Sans;
+  font-family: Sans, Ubuntu, "DejaVu Sans", serif !important;;
   direction: rtl;
   line-height: 2;
 }
