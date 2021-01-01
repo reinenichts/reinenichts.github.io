@@ -124,7 +124,7 @@
 &lt;p&gt;مورد دوم سایز کتاب هست. سایز آ۴ برای این کار مناسب نیست چون خیلی بزرگه.&lt;/p&gt;
 &lt;p&gt;سایز آ۵ بهتره ولی بازم بزرگه (میخوایم کتابمون با نمک‌تر باشه و تو جیب جا شه).&lt;/p&gt;
 &lt;p&gt;سایز آ۶ عالیه ولی یه سری پیچیدگی‌ها داره.&lt;/p&gt;
-&lt;p&gt;در چاپ سایز آ۵ باید توی هر صفحه‌ی آ۴ دوتا از صفحات کتابمون چاپ شن. که خب برای این کار توی بخش پرینت آدوبی ریدر چاپ به صورت booklet رو داریم که دقیقاً همین کار رو برای سایز آ۵ انجام مده. از &lt;a href="https://helpx.adobe.com/acrobat/kb/print-booklets-acrobat-reader.html"&gt;اینجا&lt;/a&gt; میتونید این روش رو ببینید.&lt;/p&gt;
+&lt;p&gt;در چاپ سایز آ۵ باید توی هر صفحه‌ی آ۴ دوتا از صفحات کتابمون چاپ شن. که خب برای این کار توی بخش پرینت آدوبی ریدر چاپ به صورت booklet رو داریم که دقیقاً همین کار رو برای سایز آ۵ انجام میده.از &lt;a href="https://helpx.adobe.com/acrobat/kb/print-booklets-acrobat-reader.html"&gt;اینجا&lt;/a&gt; میتونید این روش رو ببینید.&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/bookleter/a5-booklet.png"/&gt;&lt;/p&gt;
 &lt;p&gt;ولی برای سایز آ۶ چون باید توی هر صفحه، ۴ صفحه چاپ شه و بعد صفحات از وسط بُرِش بخورن و روی هم قرار بگیرن و باز هم ترتیب حفظ شه، طبیعتاً پیچیدگی کار خیلی بیشتر میشه و هیچ نرم‌افزاری (تا اونجایی که من دیدم) این کار رو انجام نمیده.
 توی وب گردیم به یه &lt;a href="https://github.com/ERnsTL/a6-booklet-on-a4"&gt;برنامه‌‌ با زبان گو&lt;/a&gt; برخوردم که دقیقاً همین کاری که میخوایم رو انجام میده. ترتیب صفحات رو طوری به هم میریزه که بعد از چاپ ۴ صفحه روی یک طرف برگه‌ی آ۴ و ۴ صفحه‌ی بعد پشت همون برگه و بُرِش از وسط، ترتیب حفظ میشه.&lt;/p&gt;
@@ -152,9 +152,9 @@
 &lt;p&gt;برای استفاده از این برنامه سه راه داریم:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;روش اول&lt;/strong&gt;: استفاده از فایل اجرایی ویندوز&lt;/p&gt;
 &lt;p&gt;فایل اجرایی ویندوز رو میتونید از &lt;a href="https://github.com/reinenichts/bookleter/releases"&gt;اینجا&lt;/a&gt; دانلود و اجرا کنید.&lt;/p&gt;
-&lt;p&gt;&lt;img src="../images/bookleter/github-release.png" width="200"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="../images/bookleter/bookleter.exe.png" width="200"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="../images/bookleter/bookleter-window.png" width="200"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/github-release.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/bookleter.exe.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../images/bookleter/bookleter-window.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Book Direction: جهت چینش بر اساس زبان کتاب، راست به چپ یا چپ به راست&lt;/p&gt;
 &lt;p&gt;Start Page: از صفحه‌ی End Page: تا صفحه‌ی&lt;/p&gt;
 &lt;p&gt;crop: میزان برش حاشیه‌ها بر حسب پیکسل.&lt;/p&gt;
@@ -203,8 +203,7 @@
 در ضمن، &lt;strong&gt;هزینه‌&lt;/strong&gt;ی چاپش هم از سایزهای بزرگتر کم‌تر هست.
 و خیلی &lt;strong&gt;زیباست&lt;/strong&gt; ... چه &lt;strong&gt;رنگی&lt;/strong&gt; ... چه &lt;strong&gt;سیاه و سفید&lt;/strong&gt; .&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;اگه حین استفاده از برنامه یا چاپ به مشکلی برخوردید خوشحال میشم کمکتون کنم. اگه روش دیگه‌ای هم برای انجام این کار سراغ دارید مطرح کنید که به آخر متن اضافش کنم.&lt;/p&gt;
-&lt;p&gt;ی&lt;/p&gt;</content><category term="بدون موضوع"></category></entry><entry><title>این آهنگ و شنیدی؟ قطعا</title><link href="/marule.html" rel="alternate"></link><published>2018-05-03T18:55:00+04:30</published><updated>2018-05-03T18:55:00+04:30</updated><author><name>محسن برزگر</name></author><id>tag:None,2018-05-03:/marule.html</id><summary type="html">&lt;p&gt;اگه یکی ازتون پرسید این آهنگ و شنیدی...&lt;/p&gt;</summary><content type="html">&lt;p&gt;اگه یکی ازتون پرسید:&lt;/p&gt;
+&lt;p&gt;اگه حین استفاده از برنامه یا چاپ به مشکلی برخوردید خوشحال میشم کمکتون کنم. اگه روش دیگه‌ای هم برای انجام این کار سراغ دارید مطرح کنید که به آخر متن اضافش کنم.&lt;/p&gt;</content><category term="بدون موضوع"></category></entry><entry><title>این آهنگ و شنیدی؟ قطعا</title><link href="/marule.html" rel="alternate"></link><published>2018-05-03T18:55:00+04:30</published><updated>2018-05-03T18:55:00+04:30</updated><author><name>محسن برزگر</name></author><id>tag:None,2018-05-03:/marule.html</id><summary type="html">&lt;p&gt;اگه یکی ازتون پرسید این آهنگ و شنیدی...&lt;/p&gt;</summary><content type="html">&lt;p&gt;اگه یکی ازتون پرسید:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;این آهنگ و شنیدی؟&lt;/p&gt;
 &lt;/blockquote&gt;
