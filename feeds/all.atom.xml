@@ -146,12 +146,12 @@
 &lt;hr&gt;
 &lt;h2&gt;&lt;strong&gt;راه‌کار من&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;بنابراین برای رسیدن به یه نتیجه‌ی مطلوب باید یه سری کارها رو از قبل روی پی‌دی‌اِف‌ انجام بدیم.&lt;/p&gt;
-&lt;p&gt;از اونجایی که انجام همه‌ی این مراحل برای تولید هر کتاب وقت گیر هست من یه &lt;a href="https://github.com/reinenichts/bookleter"&gt;برنامه‌ی کمکی&lt;/a&gt; برای خودکار کردن این فرایند درست کردم.&lt;a href="https://github.com/reinenichts/bookleter"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;از اونجایی که انجام همه‌ی این مراحل برای تولید هر کتاب وقت گیر هست من یه &lt;a href="https://github.com/sehraramiz/bookleter"&gt;برنامه‌ی کمکی&lt;/a&gt; برای خودکار کردن این فرایند درست کردم.&lt;a href="https://github.com/sehraramiz/bookleter"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;این برنامه صفحات دلخواه رو جدا می‌کنه و چینش کتاب رو بر اساس زبان تغییر میده و حاشیه‌ها رو به میزان دلخواه برش میزنه و در آخر ترتیب صفحات رو طوری به هم میریزه که برای چاپ در سایز آ۶ آماده شه.&lt;/p&gt;
 &lt;h2&gt;استفاده از برنامه&lt;/h2&gt;
 &lt;p&gt;برای استفاده از این برنامه سه راه داریم:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;روش اول&lt;/strong&gt;: استفاده از فایل اجرایی ویندوز&lt;/p&gt;
-&lt;p&gt;فایل اجرایی ویندوز رو میتونید از &lt;a href="https://github.com/reinenichts/bookleter/releases"&gt;اینجا&lt;/a&gt; دانلود و اجرا کنید.&lt;/p&gt;
+&lt;p&gt;فایل اجرایی ویندوز رو میتونید از &lt;a href="https://github.com/sehraramiz/bookleter/releases"&gt;اینجا&lt;/a&gt; دانلود و اجرا کنید.&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/bookleter/github-release.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/bookleter/bookleter.exe.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="../images/bookleter/bookleter-window.png"/&gt;&lt;/p&gt;
