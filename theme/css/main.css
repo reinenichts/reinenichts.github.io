@@ -1,14 +1,31 @@
+@font-face {
+  font-family: Vazir;
+  src: url(Vazir.ttf);
+}
+
+@font-face {
+  font-family: Sans;
+  src: url(irsans.ttf);
+}
+
 body {
+  font-family: Sans, Ubuntu, "DejaVu Sans", serif !important;;
+  direction: rtl;
+  line-height: 2;
   font-size: 100%;
   background-color: #111;
   color: #ddd;
   width: 80%;
   min-height: 200px;
-  padding: 1em;
-  margin: 5% 10%;
+  max-width: 700px;
   border: thin solid gray;
   border-radius: 5px;
   display: block;
+  margin: 5% 10%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline-start: 5%;
+  padding-inline-end: 5%;
 }
 
 a:link    { color: greenyellow; text-decoration: none;      }
@@ -36,3 +53,6 @@ pre {
     white-space: pre-wrap;
 }
 
+nav {
+    text-align: center;
+}

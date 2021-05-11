@@ -1,34 +1,8 @@
-@font-face {
-  font-family: Vazir;
-  src: url(Vazir.ttf);
-}
-
-@font-face {
-  font-family: Sans;
-  src: url(irsans.ttf);
-}
-
-body {
-  font-family: Sans, Ubuntu, "DejaVu Sans", serif !important;;
-  direction: rtl;
-  line-height: 2;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 700px;
-  padding-inline-start: 5%;
-  padding-inline-end: 5%;
-}
-
 pre code {
     direction: ltr;
 }
 
 .article, .gt-container {
-    padding-inline-start: 5%;
-    padding-inline-end: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 700px;
 }
 
 .article hr {
@@ -69,8 +43,12 @@ blockquote {
     font-size: small;
 }
 
-footer.links {
+#footer.links {
     font-size: medium;
+}
+
+#footer {
+    text-align: center;
 }
 
 hr {
