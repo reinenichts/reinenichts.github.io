@@ -26,6 +26,7 @@ body {
   margin-right: auto;
   padding-inline-start: 5%;
   padding-inline-end: 5%;
+  padding: 1em;
 }
 
 a:link    { color: greenyellow; text-decoration: none;      }
